@@ -5,7 +5,7 @@ output: html_document
 ```{r}
 install.packages("devtools")
 library(devtools)
-install_github("phylogod/Project3")
+install_github("Phylogod/Project3/Project3")
 ```
 
 
@@ -20,7 +20,7 @@ library(tidyverse)
 library(dplyr)
 library(leaflet)
 ```
-To use this function you must first develop a list of taxa that you want to search data for! Listed below is my example. Whatever you define this list will be the input after the function is defined.
+To use this first function you must first develop a list of taxa that you want to search data for! Listed below is my example. Whatever you define this list will be the input after the function is defined.
 
 ```{r}
 penguins <- c("Eudyptes chrysolophus", "Eudyptes filholi", "Eudyptes chrysocome", "Eudyptes moseleyi", "Eudyptes pachyrhynchus")
