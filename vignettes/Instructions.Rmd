@@ -6,10 +6,7 @@ output: html_document
 install.packages("devtools")
 library(devtools)
 install_github("phylogod/Project3")
-
-#download.packages(url = 'https://github.com/Phylogod/Project3.git', destdir = "/cloud/project/")
 ```
-
 
 
 To set your environment and have the correct functions, you should install the packages listed below.
@@ -24,25 +21,29 @@ library(dplyr)
 library(leaflet)
 ```
 To use this function you must first develop a list of taxa that you want to search data for! Listed below is my example. Whatever you define this list will be the input after the function is defined.
+
 ```{r}
 penguins <- c("Eudyptes chrysolophus", "Eudyptes filholi", "Eudyptes chrysocome", "Eudyptes moseleyi", "Eudyptes pachyrhynchus")
 ```
 
 
-
 These next steps are applied after you defined the function!
-After defining your function, you can now use the function based of the list you defined taxa list. I used "penguins".
+After defining your function, you can now use the function based off the list you defined with taxa. I used "penguins".
+
 ```{r}
 query_id4(penguins)
 ```
+
 You can define that resulting data frame created to a varible to view as a data frame!
 ```{r}
 penguin_df <- query_id4(penguins)
 ```
+
 In our case our "mega_taxa" data frame will be called "penguin_df"
 ```{r}
 View(penguin_df)
 ```
+
 Recommendations for later data use, would be to filter "mega_taxa" data frame that contains only the columns you need.
 
 The second function instructions begin here!
@@ -51,10 +52,11 @@ The package below will be used to organize the appropriate data as well as visua
 They will be grouped and the map created is interactive based on your zoom.
 The parameters of this function require Scientific Name, Latitude, and Longitude to be in the dataframe. Your data set retrieved should have these columns in order to be mapped by the mapping function developed.
 Using the function defined above, input the dataframe that has the appropairte paramaters to create a mapping of the specimen locations.
-Required fields in the data table include scientificName, decimalLatitude, and decimalLongitude.
+
 ```{r}
 visualize_taxa(penguin_df)
 ```
+
 Example: I inputed my "penguin_df" data table contain the neccesary parameters, into my defined functions.
 
 
