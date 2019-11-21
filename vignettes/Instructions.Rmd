@@ -2,11 +2,13 @@
 title: "Instructions for Function Use"
 output: html_document
 ---
+```{r}
+install.packages("devtools")
+library(devtools)
+install_github("phylogod/Project3")
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+#download.packages(url = 'https://github.com/Phylogod/Project3.git', destdir = "/cloud/project/")
 ```
-
 
 
 
@@ -14,8 +16,12 @@ To set your environment and have the correct functions, you should install the p
 ```{r}
 install.packages("rgbif")
 install.packages("tidyverse")
+install.packages("dplyr")
+install.packages("leaflet")
 library(rgbif)
 library(tidyverse)
+library(dplyr)
+library(leaflet)
 ```
 To use this function you must first develop a list of taxa that you want to search data for! Listed below is my example. Whatever you define this list will be the input after the function is defined.
 ```{r}
@@ -43,12 +49,6 @@ The second function instructions begin here!
 
 The package below will be used to organize the appropriate data as well as visualize the data of choice. In this example we will be visualizing the data frame in terms of their global positions.
 They will be grouped and the map created is interactive based on your zoom.
-```{r}
-install.packages("tidyverse")
-install.packages("leaflet")
-library(leaflet)
-library(tidyverse)
-```
 The parameters of this function require Scientific Name, Latitude, and Longitude to be in the dataframe. Your data set retrieved should have these columns in order to be mapped by the mapping function developed.
 Using the function defined above, input the dataframe that has the appropairte paramaters to create a mapping of the specimen locations.
 Required fields in the data table include scientificName, decimalLatitude, and decimalLongitude.
@@ -56,3 +56,5 @@ Required fields in the data table include scientificName, decimalLatitude, and d
 visualize_taxa(penguin_df)
 ```
 Example: I inputed my "penguin_df" data table contain the neccesary parameters, into my defined functions.
+
+
