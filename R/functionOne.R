@@ -17,6 +17,6 @@ query_id4 <- function(taxalist) {
     ids[taxa] <- c(raw$key)
   }
   taxa_occurrences <- lapply(ids, rgbif::occ_search, return = "data")
-  mega_taxa <- bind_rows(taxa_occurrences, .id = "column_labels")
+  mega_taxa <- dplyr::bind_rows(taxa_occurrences, .id = "column_labels")
   return(mega_taxa)
 }
