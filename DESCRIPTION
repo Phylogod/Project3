@@ -1,0 +1,18 @@
+Package: QAM
+Type: Package
+Title: Querying and mapping data of a given species
+Version: 1.0.0
+Author@R: person("Tyler","Tran", role = c("aut","cre"), email = "tyler.tran@selu.edu")
+Description: An R package to query GenBank for genetic data based of genus and species provided. This data can the be used to be mapped on a global map
+License: MIT
+Imports:
+  leaflet,
+  tidyverse,
+  rgbif
+Suggests:
+  knitr,
+  rmarkdown
+Encoding: UTF-8
+LazyData: true
+VignetteBuilder: knitr
+RoxygenNote: 7.0.0
