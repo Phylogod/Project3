@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+QAM.Rcheck/
+QAM*.tar.gz
+QAM*.tgz

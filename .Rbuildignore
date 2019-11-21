@@ -1,0 +1,5 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^QAM\.Rcheck$
+^QAM.*\.tar\.gz$
+^QAM.*\.tgz$
